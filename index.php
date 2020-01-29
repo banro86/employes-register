@@ -8,6 +8,3 @@
    $rutas -> Plantilla();
    
  ?>
-
-
- <p1>HOLA MUNDO</p1>
