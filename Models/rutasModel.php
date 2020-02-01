@@ -6,7 +6,7 @@ class Modelo{
  //Static porque el metodo recibira parametros
 	 public static function RutasModel($rutas){
 
-		if($rutas == "ingreso" || $rutas == "registrar" || $rutas == "empleados" || $rutas == "salir")
+		if($rutas == "ingreso" || $rutas == "registrar" || $rutas == "empleados" || $rutas == "salir" || $rutas == "editar")
 		{
 			$pagina = "Views/modules/".$rutas.".php";
 		}else 

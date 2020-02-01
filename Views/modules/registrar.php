@@ -20,6 +20,5 @@
 	</form>
 
 	<?php
-
      $registrar = EmpleadosController::RegistroEmpleadoC();
     ?>
