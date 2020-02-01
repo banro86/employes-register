@@ -1,2 +1,2 @@
 # employes-register
-Registro de empleados 
+Registro de empleados Patrón MVC

@@ -3,10 +3,13 @@
 
 	<form method="post" action="">
 		
-		<input type="text" placeholder="Usuario" name="usuario" required>
-
-		<input type="password" placeholder="Contraseña" name="clave" required>
-
+		<input type="text" placeholder="Usuario" name="usuarioIngreso" required>
+		<input type="password" placeholder="Contraseña" name="claveIngreso" required>
 		<input type="submit" value="Ingresar">
 
 	</form>
+
+	<?php
+	$ingreso = new AdminController();
+	$ingreso -> IngresoC();
+	?>

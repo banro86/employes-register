@@ -21,7 +21,4 @@ class RutasController{
        include $respuesta;
     }
 }
-
-
-
 ?>
