@@ -10,18 +10,16 @@
 	<br>
 	<h1>REGISTRAR UN EMPLEADO</h1>
 
-	<form method="post" action="">
-		
-		<input type="text" placeholder="Nombre" name="nombre" required>
-
-		<input type="text" placeholder="Apellido" name="apellido" required>
-
-		<input type="email" placeholder="Email" name="email" required>
-
-		<input type="text" placeholder="Puesto" name="puesto" required>
-
-		<input type="text" placeholder="Salario" name="salario" required>
-
+	<form method="post">		
+		<input type="text" placeholder="Nombre" name="nombreRegistro" required>
+		<input type="text" placeholder="Apellido" name="apellidoRegistro" required>
+		<input type="email" placeholder="Email" name="emailRegistro" required>
+		<input type="text" placeholder="Puesto" name="puestoRegistro" required>
+		<input type="text" placeholder="Salario" name="salarioRegistro" required>
 		<input type="submit" value="Registrar">
-
 	</form>
+
+	<?php
+
+     $registrar = EmpleadosController::RegistroEmpleadoC();
+    ?>
