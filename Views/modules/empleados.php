@@ -1,20 +1,35 @@
 	<?php
 	 session_start();
+	 //$status = session_status();
+	 /*if(!isset($_SESSION)) 
+	 { 
+		header("location:index.php?ruta=ingreso");		
+		exit();
+	 }
+	 else
+	 {
+		 session_destroy();
+		 session_start(); 
+	 }*/
 	 
-	  if(!$_SESSION["ingreso"]){
-		header("location:index.php?ruta=ingreso");
-		
+	  //if(!$_SESSION["ingreso"]){
+	//	  echo $status;
+	/*if(!isset($_SESSION)){
+		header("location:index.php?ruta=ingreso");		
+		exit();
+	  } 
+	  else */
+	    if(!$_SESSION["ingreso"]){
+		header("location:index.php?ruta=ingreso");		
 		exit();
 	  }
+
 	 ?>
 
 	<br>
 	<h1>Empleados</h1>
-
-	<table id="t1" border="1">
-		
-		<thead>
-			
+	<table id="t1" border="1">		
+		<thead>			
 			<tr>
 				<th>Nombre</th>
 				<th>Apellido</th>
@@ -23,23 +38,14 @@
 				<th>Salario</th>
 				<th></th>
 				<th></th>
-
 			</tr>
-
 		</thead>
-
-		<tbody>
-			
-			<tr>
-				<td>Alejandro MONO</td>
-				<td>Petrelli</td>
-				<td>ale@hotmail.com</td>
-				<td>Programador PHP</td>
-				<td>$ 8.000</td>
-				<td><button>Editar</button></td>
-				<td><button>Borrar</button></td>
-			</tr>
-
+		<tbody>			
+			<?php	 
+			$listar = EmpleadosController::ListarEmpleadosC();
+			?>
 		</tbody>
-
 	</table>
+<br>
+
+

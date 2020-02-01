@@ -13,6 +13,7 @@ class AdminController{
                 session_start();
                 $_SESSION["ingreso"] = true;
                 header("location:index.php?ruta=empleados");
+              // EmpleadosController::ListarEmpleadosC();
             }
             else{
                 echo "ERROR AL INGRESAR";

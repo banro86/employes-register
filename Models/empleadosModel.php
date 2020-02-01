@@ -3,6 +3,7 @@
 require_once "conexionBD.php";
 
 class EmpleadosModel extends ConexionBD{
+    private $personas;
 
     public static function RegistroEmpleadoM($datosController,$tableBD){
         $pdo = ConexionBD::ConectarBD()->prepare("INSERT INTO $tableBD (name,last_name,email,job,salary) VALUES(:nombre,:apellido,:email,:puesto,:salario)");
@@ -20,5 +21,13 @@ class EmpleadosModel extends ConexionBD{
         }
         $pdo -> close();
 
+    }
+
+
+    public function ListarEmpleadosM($tableBD){
+        $pdo = ConexionBD::ConectarBD()->prepare("SELECT name,last_name,email,job,salary FROM $tableBD ORDER BY name ASC");
+        $pdo -> execute();
+        return $pdo -> fetchAll();
+        $pdo -> close();
     }
 }
