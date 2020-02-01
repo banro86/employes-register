@@ -4,7 +4,7 @@
 class Modelo{
 
  //Static porque el metodo recibira parametros
-	static public function RutasModel($rutas){
+	 public static function RutasModel($rutas){
 
 		if($rutas == "ingreso" || $rutas == "registrar" || $rutas == "empleados" || $rutas == "salir")
 		{

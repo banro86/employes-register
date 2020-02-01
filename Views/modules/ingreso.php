@@ -10,6 +10,5 @@
 	</form>
 
 	<?php
-	$ingreso = new AdminController();
-	$ingreso -> IngresoC();
+	 $ingreso = AdminController::IngresoC();
 	?>
