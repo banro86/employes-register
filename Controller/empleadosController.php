@@ -27,8 +27,8 @@ class EmpleadosController{
                <td>".$value['email']."</td>
                <td>".$value['job']."</td>
                <td>".$value['salary']."</td>
-               <td><a href=index.php?ruta=editar&id=".$value['id'].">Editar</a></td>
-               <td><button>Borrar</button></td>
+               <td><a href=index.php?ruta=editar&id=".$value['id']."><button>Editar</button></a></td>
+               <td><a href=index.php?ruta=empleados&id=".$value['id']."><button>Borrar</button></a></td>
              </tr>";
     }
      // header("location:index.php?ruta=empleados");
@@ -61,6 +61,21 @@ class EmpleadosController{
                 echo "ERROR AL ACTUALIZAR DATOS EN BD";
             }
         }
+    }
 
-      }
+        public static function EliminarEmpleadosC(){
+            if(isset($_GET["id"])){
+            $tableBD = "employe";
+            $id = $_GET["id"];
+            $answer = EmpleadosModel::EliminarEmpleadosM($tableBD,$id);
+
+            if($answer){
+                header("location:index.php?ruta=empleados");
+            }
+            else{
+                echo "ERROR AL ELIMINAR DATOS EN BD";
+            }
+          }
+        }
+     
 }

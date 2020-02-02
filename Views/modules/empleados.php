@@ -28,7 +28,7 @@
 
 	<br>
 	<h1>Empleados</h1>
-	<table id="t1" border="1">		
+	<table id="t1" border="1" class="striped highlight">		
 		<thead>			
 			<tr>
 				<th>Nombre</th>
@@ -47,5 +47,8 @@
 		</tbody>
 	</table>
 <br>
+<?php
+      $eliminar = EmpleadosController::EliminarEmpleadosC();
+?>
 
 
